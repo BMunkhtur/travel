@@ -1,22 +1,21 @@
 import React from "react";
 import Navbar from "../comp/Herosec/Navbar/index";
-import { Container, Grid } from "@mui/material";
-import Herotitle from "../comp/Herosec/Searchinput/Herotitle";
+import { Grid } from "@mui/material";
+
 import { Box } from "@mui/system";
 import SearchInput from "../comp/Herosec/Searchinput/Searchinput";
-import { Height } from "@mui/icons-material";
-import Maintitle from "../comp/Herosec/Searchinput/Maintitle";
-import Herocard from "../comp/Herosec/Herocard/Herocard";
+
+import TopCategories from "../comp/Herosec/Herocard/TopCategories";
 import Imagecard from "../comp/Herosec/Herocard/Imagecard";
 import Boxshadow from "../comp/Herosec/Herocard/Boxshadow";
-import Cardmain from "../comp/Mainsec/Cardmain";
-import Mainsec from "../comp/Mainsec/Mainsec";
-import Maintwo from "../comp/Mainsec/Maintwo";
-import Mainthree from "../comp/Mainsec/Mainthree";
-import Mainfour from "../comp/Mainsec/Mainfour";
-import Footer from "../comp/Mainsec/Footer";
+import Cardmain from "../comp/Mainsec/MainsecCard/Cardmain";
+import Mainsec from "../comp/Mainsec/MainsecCard/Mainsec";
+import Maintwo from "../comp/Mainsec/MainAssi/Maintwo";
+import Mainthree from "../comp/Mainsec/MainsecCard/Mainthree";
+import Mainfour from "../comp/Mainsec/MainAssi/Mainfour";
+import Footer from "../comp/Footer/Footer";
 
-const Home = () => {
+const Home = ({ changeMode }) => {
   return (
     <Grid
       sx={{
@@ -30,12 +29,10 @@ const Home = () => {
     >
       <Box>
         <Grid sx={{ marginLeft: "10%", marginRight: "10%" }}>
-          <Navbar />
+          <Navbar changeMode={changeMode} />
           <Grid sx={{ marginBottom: "5%" }}>
-            <Herotitle />
             <SearchInput />
-            <Maintitle />
-            <Herocard />
+            <TopCategories />
           </Grid>
         </Grid>
         <Grid sx={{ marginLeft: "10%", marginBottom: "5%" }}>
@@ -52,7 +49,7 @@ const Home = () => {
         </Grid>
         <Boxshadow />
         <Mainfour />
-        {/* <Example /> */}
+
         <Footer />
       </Box>
     </Grid>

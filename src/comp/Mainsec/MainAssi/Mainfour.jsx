@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Button, Toolbar } from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
+import { Box, Grid, Typography, Button, Toolbar, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 
 const Mainfour = () => {

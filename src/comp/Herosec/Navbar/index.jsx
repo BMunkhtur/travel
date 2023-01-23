@@ -13,6 +13,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import LoginMain from "./Signmodal";
 import Link from "@mui/material/Link";
+import { Switch } from "@mui/material";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Stays", "Flights", "Packages"];
@@ -89,7 +90,7 @@ function Navbar(props) {
               ))}
             </Box>
           </Link>
-
+          <Switch color="success" onChange={props.changeMode}></Switch>
           <LoginMain />
         </Toolbar>
       </AppBar>

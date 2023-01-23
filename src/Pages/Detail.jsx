@@ -1,20 +1,19 @@
 import React from "react";
 import Navbar from "../comp/Herosec/Navbar/index";
-import { Container, Grid } from "@mui/material";
-import Herotitle from "../comp/Herosec/Searchinput/Herotitle";
+import { Grid } from "@mui/material";
+
 import { Box } from "@mui/system";
 import SearchInput from "../comp/Herosec/Searchinput/Searchinput";
 
-import Maintitle from "../comp/Herosec/Searchinput/Maintitle";
-import Herocard from "../comp/Herosec/Herocard/Herocard";
-import Imagecard from "../comp/Herosec/Herocard/Imagecard";
+import Herocard from "../comp/Herosec/Herocard/TopCategories";
+
 import Boxshadow from "../comp/Herosec/Herocard/Boxshadow";
 
-import Footer from "../comp/Mainsec/Footer";
-import Cardfivedata from "../comp/Mainsec/Cardfivedata";
-import Cardsix from "../comp/Mainsec/Cardsix";
-import Cardseven from "../comp/Mainsec/Cardseven";
-import Cardnine from "../comp/Mainsec/Cardnine";
+import Footer from "../comp/Footer/Footer";
+import Cardfivedata from "../comp/Mainsec/MainsecCard/Cardfivedata";
+import Cardsix from "../comp/Mainsec/MainsecCard/Cardsix";
+import Cardseven from "../comp/Mainsec/MainsecCard/Cardseven";
+import Cardnine from "../comp/Mainsec/MainsecCard/Cardnine";
 
 const Detail = () => {
   return (
@@ -31,9 +30,8 @@ const Detail = () => {
         <Grid sx={{ marginLeft: "10%", marginRight: "10%" }}>
           <Navbar />
           <Grid sx={{ marginBottom: "5%" }}>
-            <Herotitle />
             <SearchInput />
-            <Maintitle />
+
             <Herocard />
           </Grid>
         </Grid>

@@ -1,15 +1,31 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import ImgCard from "./imgcard";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import zIndex from "@mui/material/styles/zIndex";
-
+const ImgCard = ({ card }) => {
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        position: "relative",
+        borderRadius: "20px",
+      }}
+    >
+      <img src={`${card.imageURL}`} alt="" width={420} height={310} />
+      <Box
+        sx={{
+          color: "dark",
+          position: "absolute",
+          top: "75%",
+          left: "10%",
+          color: "white",
+          fontSize: "28px",
+        }}
+      >
+        {card.ner}
+      </Box>
+    </Box>
+  );
+};
 const Imagecard = () => {
   const coti = [
     {
@@ -46,7 +62,7 @@ const Imagecard = () => {
     },
   ];
   return (
-    <Grid sx={{ zIndex: "5" }}>
+    <Grid>
       <Typography
         variant="h4"
         sx={{
@@ -58,22 +74,20 @@ const Imagecard = () => {
       >
         Top Vacation Destinations
       </Typography>
-      <Swiper
-        spaceBetween={120}
-        zIndex={10}
-        slidesPerView={4}
-        onSwiper={(swiper) => console.log(swiper)}
-        modules={[Navigation]}
-        onSlideChange={() => console.log("slide change")}
+      <Grid
+        sx={{
+          overflowX: "scroll",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
       >
         <Box sx={{ display: "flex", gap: "2% ", zIndex: "4" }}>
           {coti.map((card, index) => (
-            <SwiperSlide>
-              <ImgCard key={index} card={card} />
-            </SwiperSlide>
+            <ImgCard key={index} card={card} />
           ))}
         </Box>
-      </Swiper>
+      </Grid>
     </Grid>
   );
 };

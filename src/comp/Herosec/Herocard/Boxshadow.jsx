@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 
 const Boxshadow = () => {
   return (
@@ -9,6 +9,7 @@ const Boxshadow = () => {
         width: "100%",
         position: "absolute",
         top: "88%",
+        zIndex: "1",
         height: "14%",
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 89.58%)",

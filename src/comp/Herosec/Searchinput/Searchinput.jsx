@@ -1,12 +1,9 @@
 import * as React from "react";
-import { styled, alpha } from "@mui/material/styles";
-import AppBar from "@mui/material/AppBar";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import Button from "@mui/material/Button";
@@ -14,7 +11,6 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { Grid } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
-
   borderRadius: theme.shape.borderRadius,
   marginLeft: 0,
   width: "100%",
@@ -40,6 +36,18 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function SearchInput() {
   return (
     <Box>
+      <Grid sx={{ marginBottom: "2%" }}>
+        <Typography
+          sx={{
+            color: "white",
+            fontWeight: "600",
+            width: "600px",
+            fontSize: "64px",
+          }}
+        >
+          The whole world awaits.
+        </Typography>
+      </Grid>
       <Grid
         position="static"
         sx={{

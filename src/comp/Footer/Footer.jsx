@@ -1,12 +1,20 @@
 import React from "react";
-import { Box, Grid, Typography, Button, Toolbar } from "@mui/material";
-import { styled, alpha } from "@mui/material/styles";
-import InputBase from "@mui/material/InputBase";
-import Footerdata from "./Footerdata";
+import { Box, Typography, Button } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+const Footerdata = ({ card }) => {
+  return (
+    <Box>
+      <Typography sx={{ marginBottom: "10%" }}> {card.rowone}</Typography>
+      <Typography sx={{ marginBottom: "10%" }}>{card.rowtwo}</Typography>
+      <Typography sx={{ marginBottom: "10%" }}> {card.rowthree}</Typography>
+      <Typography sx={{ marginBottom: "10%" }}> {card.rowfour}</Typography>
+      <Typography sx={{ marginBottom: "10%" }}> {card.rowfive}</Typography>
+    </Box>
+  );
+};
 const Footer = () => {
   const footdata = [
     {

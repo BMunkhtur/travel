@@ -1,13 +1,47 @@
 import React from "react";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Card, Button } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import Cardmainmap from "./Cardmainmap";
 
+const Cardmainmap = ({ card }) => {
+  return (
+    <Card sx={{ width: "100%", padding: "20px", display: "flex", gap: "20px" }}>
+      <Grid>
+        <img src={`${card.imageURL}`} alt="" width={500} />
+      </Grid>
+      <Grid
+        sx={{
+          display: "flex",
+          gap: "30px",
+          flexDirection: "column",
+        }}
+      >
+        <Box> {card.type}</Box>
+        <Box sx={{ fontSize: "24px", fontWeight: "700" }}> {card.ner}</Box>
+        <Box> {card.text}</Box>
+        <Button
+          sx={{
+            borderRadius: "40px",
+            backgroundColor: "blue",
+            width: "15vh",
+            height: "20%",
+            padding: "5%",
+            marginTop: "1%",
+            fontSize: "15px",
+            fontWeight: "400",
+          }}
+          color="info"
+        >
+          Book now
+        </Button>
+      </Grid>
+    </Card>
+  );
+};
 const Cardmain = () => {
   const coti = [
     {
@@ -37,7 +71,6 @@ const Cardmain = () => {
   ];
   return (
     <Grid>
-      {" "}
       <Typography
         variant="h4"
         sx={{
@@ -49,21 +82,11 @@ const Cardmain = () => {
       >
         Offers
       </Typography>
-      <Swiper
-        spaceBetween={110}
-        slidesPerView={2}
-        onSwiper={(swiper) => console.log(swiper)}
-        modules={[Navigation]}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <Box sx={{ display: "flex", gap: "2% " }}>
-          {coti.map((card, index) => (
-            <SwiperSlide>
-              <Cardmainmap key={index} card={card} />
-            </SwiperSlide>
-          ))}
-        </Box>
-      </Swiper>
+      <Box sx={{ display: "flex", gap: "2% " }}>
+        {coti.map((card, index) => (
+          <Cardmainmap key={index} card={card} />
+        ))}
+      </Box>
     </Grid>
   );
 };
