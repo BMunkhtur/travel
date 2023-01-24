@@ -1,11 +1,5 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 const Maindata = ({ card }) => {
   return (
@@ -69,8 +63,14 @@ const Mainsec = () => {
     },
   ];
   return (
-    <Grid>
-      {" "}
+    <Grid
+      sx={{
+        overflowX: "scroll",
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+      }}
+    >
       <Typography
         variant="h4"
         sx={{
@@ -83,21 +83,11 @@ const Mainsec = () => {
       >
         Browse by property type
       </Typography>
-      <Swiper
-        spaceBetween={110}
-        slidesPerView={4}
-        onSwiper={(swiper) => console.log(swiper)}
-        modules={[Navigation]}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <Box sx={{ display: "flex", gap: "2% " }}>
-          {coti.map((card, index) => (
-            <SwiperSlide>
-              <Maindata key={index} card={card} />
-            </SwiperSlide>
-          ))}
-        </Box>
-      </Swiper>
+      <Box sx={{ display: "flex", gap: "2% " }}>
+        {coti.map((card, index) => (
+          <Maindata key={index} card={card} />
+        ))}
+      </Box>
     </Grid>
   );
 };

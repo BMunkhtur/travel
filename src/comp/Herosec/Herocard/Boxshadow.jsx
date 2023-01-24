@@ -9,7 +9,7 @@ const Boxshadow = () => {
         width: "100%",
         position: "absolute",
         top: "88%",
-        zIndex: "1",
+        zIndex: "0",
         height: "14%",
         background:
           "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 89.58%)",

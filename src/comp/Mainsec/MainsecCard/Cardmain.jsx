@@ -1,15 +1,19 @@
 import React from "react";
 import { Box, Grid, Typography, Card, Button } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 
 const Cardmainmap = ({ card }) => {
   return (
-    <Card sx={{ width: "100%", padding: "20px", display: "flex", gap: "20px" }}>
+    <Grid
+      sx={{
+        width: "100%",
+        padding: "30px",
+        display: "flex",
+        gap: "20px",
+        borderRadius: "16px",
+        boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
+        background: "#FFFFFF",
+      }}
+    >
       <Grid>
         <img src={`${card.imageURL}`} alt="" width={500} />
       </Grid>
@@ -18,6 +22,7 @@ const Cardmainmap = ({ card }) => {
           display: "flex",
           gap: "30px",
           flexDirection: "column",
+          width: "300px",
         }}
       >
         <Box> {card.type}</Box>
@@ -39,7 +44,7 @@ const Cardmainmap = ({ card }) => {
           Book now
         </Button>
       </Grid>
-    </Card>
+    </Grid>
   );
 };
 const Cardmain = () => {
@@ -70,19 +75,25 @@ const Cardmain = () => {
     },
   ];
   return (
-    <Grid>
+    <Grid
+      sx={{
+        overflowX: "scroll",
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+      }}
+    >
       <Typography
         variant="h4"
         sx={{
           color: "dark",
           fontWeight: "700",
           width: "900px",
-          marginBottom: "2%",
         }}
       >
         Offers
       </Typography>
-      <Box sx={{ display: "flex", gap: "2% " }}>
+      <Box sx={{ display: "flex", gap: "2% ", padding: "20px" }}>
         {coti.map((card, index) => (
           <Cardmainmap key={index} card={card} />
         ))}

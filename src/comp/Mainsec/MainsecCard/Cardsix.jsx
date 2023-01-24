@@ -4,10 +4,12 @@ import { Box, Grid, Typography, Card } from "@mui/material";
 
 const Cardsixdata = ({ card }) => {
   return (
-    <Card
+    <Grid
       sx={{
         padding: "20px ",
-
+        borderRadius: "16px",
+        boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
+        background: "#FFFFFF",
         zIndex: "5",
       }}
     >
@@ -97,7 +99,7 @@ const Cardsixdata = ({ card }) => {
           </Box>
         </Box>
       </Box>
-    </Card>
+    </Grid>
   );
 };
 const Cardsix = () => {

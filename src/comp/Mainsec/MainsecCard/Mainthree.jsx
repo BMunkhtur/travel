@@ -1,16 +1,14 @@
 import React from "react";
 import { Box, Grid, Typography, Card } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+
 const Cardthree = ({ card }) => {
   return (
     <Grid
       sx={{
         padding: "20px ",
+        borderRadius: "16px",
+        boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
+        background: "#FFFFFF",
       }}
     >
       <Box>
@@ -56,26 +54,26 @@ const Mainthree = () => {
       count: "155,073 travelers",
     },
     {
-      ner: "Beach",
-      imageURL: "/pic/32.png",
+      ner: "India",
+      imageURL: "/pic/30.png",
       type: "Travel community",
       count: "155,073 travelers",
     },
     {
-      ner: "Mountains",
-      imageURL: "/pic/33.png",
+      ner: "Travel Talk",
+      imageURL: "/pic/31.png",
       type: "Travel community",
       count: "155,073 travelers",
     },
     {
-      ner: "Beach",
-      imageURL: "/pic/32.png",
+      ner: "India",
+      imageURL: "/pic/30.png",
       type: "Travel community",
       count: "155,073 travelers",
     },
     {
-      ner: "Mountains",
-      imageURL: "/pic/33.png",
+      ner: "Travel Talk",
+      imageURL: "/pic/31.png",
       type: "Travel community",
       count: "155,073 travelers",
     },
@@ -86,7 +84,6 @@ const Mainthree = () => {
         marginBottom: "10%",
       }}
     >
-      {" "}
       <Typography
         variant="h4"
         sx={{
@@ -99,20 +96,21 @@ const Mainthree = () => {
       >
         Connect with other travelers in our community
       </Typography>
-      <Box
+      <Grid
         sx={{
           display: "flex",
           overflowX: "auto",
           "&::-webkit-scrollbar": {
             display: "none",
           },
-          justifyContent: "space-between",
+          padding: "20px",
+          gap: "2%",
         }}
       >
         {coti.map((card, index) => (
           <Cardthree key={index} card={card} />
         ))}
-      </Box>
+      </Grid>
     </Grid>
   );
 };

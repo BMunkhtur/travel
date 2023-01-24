@@ -82,7 +82,7 @@ const Imagecard = () => {
           },
         }}
       >
-        <Box sx={{ display: "flex", gap: "2% ", zIndex: "4" }}>
+        <Box sx={{ display: "flex", gap: "2% ", zIndex: "1" }}>
           {coti.map((card, index) => (
             <ImgCard key={index} card={card} />
           ))}

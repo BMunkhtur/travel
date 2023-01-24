@@ -1,19 +1,16 @@
 import React from "react";
 import { Box, Grid, Typography, Card } from "@mui/material";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import StarIcon from "@mui/icons-material/Star";
 const Cardfive = ({ card }) => {
   return (
-    <Card
+    <Grid
       sx={{
         padding: "20px ",
         width: "100%",
         zIndex: "5",
+        borderRadius: "16px",
+        boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
+        background: "#FFFFFF",
       }}
     >
       <Box sx={{ marginBottom: "4%" }}>
@@ -85,7 +82,6 @@ const Cardfive = ({ card }) => {
         <Box
           sx={{
             display: "flex",
-
             gap: "20% ",
           }}
         >
@@ -102,7 +98,7 @@ const Cardfive = ({ card }) => {
           </Box>
         </Box>
       </Box>
-    </Card>
+    </Grid>
   );
 };
 const Cardfivedata = () => {
@@ -214,7 +210,15 @@ const Cardfivedata = () => {
     },
   ];
   return (
-    <Grid sx={{ marginBottom: "10%" }}>
+    <Grid
+      sx={{
+        marginBottom: "2%",
+        overflowX: "scroll",
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+      }}
+    >
       {" "}
       <Typography
         variant="h3"
@@ -222,27 +226,16 @@ const Cardfivedata = () => {
           color: "white",
           fontWeight: "700",
           width: "900px",
-          marginBottom: "2%",
-          marginTop: "3%",
+          marginBottom: "1%",
         }}
       >
         Popular Beach Destinations
       </Typography>
-      <Swiper
-        spaceBetween={90}
-        slidesPerView={4}
-        onSwiper={(swiper) => console.log(swiper)}
-        modules={[Navigation]}
-        onSlideChange={() => console.log("slide change")}
-      >
-        <Box sx={{ display: "flex", gap: "2% " }}>
-          {coti.map((card, index) => (
-            <SwiperSlide>
-              <Cardfive key={index} card={card} />
-            </SwiperSlide>
-          ))}
-        </Box>
-      </Swiper>
+      <Box sx={{ display: "flex", gap: "2% ", padding: "20px" }}>
+        {coti.map((card, index) => (
+          <Cardfive key={index} card={card} />
+        ))}
+      </Box>
     </Grid>
   );
 };
