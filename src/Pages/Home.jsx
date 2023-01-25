@@ -12,7 +12,6 @@ import Maintwo from "../comp/Mainsec/MainAssi/Maintwo";
 import Mainthree from "../comp/Mainsec/MainsecCard/Mainthree";
 import Mainfour from "../comp/Mainsec/MainAssi/Mainfour";
 import Footer from "../comp/Footer/Footer";
-
 const Home = ({ changeMode }) => {
   return (
     <Grid
@@ -37,7 +36,6 @@ const Home = ({ changeMode }) => {
         <Grid sx={{ marginLeft: "10%", marginBottom: "5%" }}>
           <Imagecard />
         </Grid>
-
         <Grid sx={{ marginLeft: "10%" }}>
           <Cardmain />
           <Mainsec />
@@ -46,9 +44,7 @@ const Home = ({ changeMode }) => {
           </Grid>
           <Mainthree />
         </Grid>
-
         <Mainfour />
-
         <Footer />
       </Box>
     </Grid>

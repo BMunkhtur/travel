@@ -13,7 +13,7 @@ function App() {
   const theme = createTheme({
     palette: {
       mode: Isdarkmode ? "dark" : "light",
-      primary: {
+      blue: {
         main: "#ffff",
       },
     },

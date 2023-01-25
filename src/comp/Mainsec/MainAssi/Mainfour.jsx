@@ -1,13 +1,11 @@
 import React from "react";
 import { Box, Grid, Typography, Button, Toolbar, styled } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
-
 const Mainfour = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
     width: "100%",
   }));
-
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     "& .MuiInputBase-input": {
       color: "white",

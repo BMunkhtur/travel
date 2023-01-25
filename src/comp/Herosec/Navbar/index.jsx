@@ -1,7 +1,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
@@ -48,7 +47,6 @@ function Navbar(props) {
 
   return (
     <Box sx={{ display: "flex", marginBottom: "5%" }}>
-      <CssBaseline />
       <AppBar
         component="nav"
         sx={{ background: "transparent", boxShadow: "none" }}

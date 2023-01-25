@@ -88,7 +88,6 @@ export default function SearchInput() {
               </Box>
               <Box sx={{ marginTop: "2%", color: "white" }}>
                 <Typography>
-                  {" "}
                   <CalendarTodayIcon /> Check out
                 </Typography>
               </Box>

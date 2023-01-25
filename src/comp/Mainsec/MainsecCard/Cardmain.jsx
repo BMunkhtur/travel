@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Card, Button } from "@mui/material";
+import { Box, Grid, Typography, Button } from "@mui/material";
 
 const Cardmainmap = ({ card }) => {
   return (
