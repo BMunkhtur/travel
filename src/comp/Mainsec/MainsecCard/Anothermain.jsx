@@ -43,7 +43,7 @@ const Anothermain = () => {
       sx={{
         marginLeft: "10%",
         marginRight: "10%",
-        marginTop: "20%",
+        marginTop: "3%",
         marginBottom: "3%",
         padding: "20px",
         display: "flex",

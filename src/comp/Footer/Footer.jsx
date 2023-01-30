@@ -74,7 +74,6 @@ const Footer = () => {
                 gap: "10%",
                 opacity: "0.5",
                 padding: "5%",
-                marginLeft: "10%",
               }}
             >
               <Typography

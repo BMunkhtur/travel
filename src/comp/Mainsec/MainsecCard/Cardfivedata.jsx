@@ -7,7 +7,6 @@ const Cardfive = ({ card }) => {
       sx={{
         padding: "20px ",
         width: "100%",
-        zIndex: "5",
         borderRadius: "16px",
         boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
         background: "#FFFFFF",
@@ -212,21 +211,18 @@ const Cardfivedata = () => {
   return (
     <Grid
       sx={{
-        marginBottom: "2%",
         overflowX: "scroll",
         "&::-webkit-scrollbar": {
           display: "none",
         },
       }}
     >
-      {" "}
       <Typography
         variant="h3"
         sx={{
           color: "white",
           fontWeight: "700",
           width: "900px",
-          marginBottom: "1%",
         }}
       >
         Popular Beach Destinations

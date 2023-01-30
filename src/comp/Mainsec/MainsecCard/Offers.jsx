@@ -29,6 +29,7 @@ const Cardmainmap = ({ card }) => {
         <Box sx={{ fontSize: "24px", fontWeight: "700" }}> {card.ner}</Box>
         <Box> {card.text}</Box>
         <Button
+          href="/Another"
           sx={{
             borderRadius: "40px",
             backgroundColor: "blue",
