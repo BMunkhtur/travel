@@ -82,7 +82,7 @@ const Offers = () => {
         "&::-webkit-scrollbar": {
           display: "none",
         },
-        marginTop: "20%",
+        marginTop: "10%",
         marginRight: "0 !important",
       }}
     >

@@ -7,11 +7,11 @@ const Boxshadow = () => {
       sx={{
         width: "100%",
         position: "absolute",
-        bottom: "-2% ",
-        zIndex: "0",
-        height: "14%",
+        bottom: "-18% ",
+        zIndex: "-",
+        height: "28%",
         background:
-          "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 89.58%)",
+          "linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 50.0%)",
       }}
     ></Grid>
   );

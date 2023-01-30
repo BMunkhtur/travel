@@ -15,12 +15,12 @@ const Herosec = () => {
         backgroundBlendMode: "color-burn",
         backgroundSize: "cover",
         width: "100%",
-        height: "100vh",
+        height: "100%",
         zIndex: "-100 ",
+        boxShadow: " 0px -200px 60px -50px rgba(255,255,255) inset",
       }}
     >
       <Navbar />
-      <Boxshadow />
       <Container maxWidth="xl">
         <SearchInput />
         <Herocard />

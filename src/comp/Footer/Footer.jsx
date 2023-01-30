@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Grid, Container } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -57,85 +57,87 @@ const Footer = () => {
     <Box
       sx={{
         background: "#141414",
-        height: "50vh",
+        height: "100%",
         width: "100%",
       }}
     >
-      <Box sx={{}}>
-        <Box>
-          <Typography
-            sx={{
-              color: "white",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                gap: "10%",
-                opacity: "0.5",
-                padding: "5%",
-              }}
-            >
-              <Typography
-                sx={{ fontSize: "48px", color: "white", opacity: "1" }}
-              >
-                Trxvl.
-              </Typography>
-              {footdata.map((card, index) => (
-                <Footerdata key={index} card={card} />
-              ))}
-            </Box>
-
-            <Button
-              variant="outlined"
+      <Container>
+        <Box sx={{}}>
+          <Box>
+            <Grid
               sx={{
                 color: "white",
-                textTransform: "capitalize",
-                height: "1%",
-                fontSize: "18px",
-                marginLeft: "37%",
               }}
             >
-              {" "}
-              <Typography
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: "10%",
+                  opacity: "0.5",
+                  padding: "5%",
+                }}
+              >
+                <Typography
+                  sx={{ fontSize: "48px", color: "white", opacity: "1" }}
+                >
+                  Trxvl.
+                </Typography>
+                {footdata.map((card, index) => (
+                  <Footerdata key={index} card={card} />
+                ))}
+              </Box>
+
+              <Button
+                variant="outlined"
                 sx={{
                   color: "white",
+                  textTransform: "capitalize",
+                  height: "1%",
+                  fontSize: "18px",
+                  marginLeft: "37%",
+                }}
+              >
+                {" "}
+                <Typography
+                  sx={{
+                    color: "white",
+                    opacity: "0.5",
+                  }}
+                >
+                  Helmet KOD
+                </Typography>
+              </Button>
+              <Typography
+                sx={{
+                  fontSize: "14px",
+                  color: "white",
+                  opacity: "1",
+                  marginLeft: "37%",
+                  marginTop: "1%",
                   opacity: "0.5",
                 }}
               >
-                Helmet KOD
+                © 1997-2021 Netflix, Inc. i-062d573a0ee099242
               </Typography>
-            </Button>
-            <Typography
-              sx={{
-                fontSize: "14px",
-                color: "white",
-                opacity: "1",
-                marginLeft: "37%",
-                marginTop: "1%",
-                opacity: "0.5",
-              }}
-            >
-              © 1997-2021 Netflix, Inc. i-062d573a0ee099242
-            </Typography>
 
-            <Box
-              sx={{
-                color: "white",
-                opacity: "0.5",
-                display: "flex",
-                gap: "20px",
-                marginLeft: "80%",
-              }}
-            >
-              <FacebookIcon />
-              <InstagramIcon />
-              <TwitterIcon />
-              <YouTubeIcon />
-            </Box>
-          </Typography>
+              <Box
+                sx={{
+                  color: "white",
+                  opacity: "0.5",
+                  display: "flex",
+                  gap: "20px",
+                  marginLeft: "80%",
+                }}
+              >
+                <FacebookIcon />
+                <InstagramIcon />
+                <TwitterIcon />
+                <YouTubeIcon />
+              </Box>
+            </Grid>
+          </Box>
         </Box>
-      </Box>
+      </Container>
     </Box>
   );
 };

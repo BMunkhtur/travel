@@ -24,16 +24,15 @@ const Travelapp = () => {
       sx={{
         background: "url(/pic/34.png) no-repeat ",
         backgroundSize: "cover",
-        height: "54vh",
+        height: "100%",
         position: "relative",
       }}
     >
-      <Container maxWidth="xl">
+      <Container>
         <Box
           sx={{
             top: "0",
             display: "flex",
-            padding: "5% 0% 0% 15%",
           }}
         >
           <Box sx={{ marginRight: "5%" }}>
