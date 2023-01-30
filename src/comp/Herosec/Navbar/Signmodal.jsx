@@ -41,9 +41,7 @@ const LoginMain = () => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            <Auth />
-          </Typography>
+          <Auth />
         </Box>
       </Modal>
     </div>

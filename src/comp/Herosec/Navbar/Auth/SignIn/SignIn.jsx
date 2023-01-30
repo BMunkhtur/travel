@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
@@ -11,16 +11,35 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
+import { Alert, Snackbar } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 const SignIn = (props) => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+  const login = () => {
+    console.log("login");
+    if (email === "" || password === "") {
+      setOpen(true);
+    } else {
+      console.log(email, password);
+      navigate("/");
+    }
   };
 
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  const changeEmail = (e) => {
+    setEmail(e.target.value);
+    console.log("email", e.target.value);
+  };
+  const changePassword = (e) => {
+    setPassword(e.target.value);
+    console.log("password", e.target.value);
+  };
   return (
     <>
       <Container component="main" maxWidth="xs">
@@ -39,12 +58,7 @@ const SignIn = (props) => {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <Box
-            component="form"
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{ mt: 1 }}
-          >
+          <Box noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
               required
@@ -54,6 +68,7 @@ const SignIn = (props) => {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={changeEmail}
             />
             <TextField
               margin="normal"
@@ -64,6 +79,7 @@ const SignIn = (props) => {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={changePassword}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -74,6 +90,7 @@ const SignIn = (props) => {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              onClick={login}
             >
               Sign In
             </Button>
@@ -96,6 +113,16 @@ const SignIn = (props) => {
             </Grid>
           </Box>
         </Box>
+        <Snackbar
+          open={open}
+          autoHideDuration={3000}
+          onClose={onClose}
+          anchorOrigin={{ vertical: "top", horizontal: "right" }}
+        >
+          <Alert severity="error" sx={{ width: "100%" }}>
+            This is a success message!
+          </Alert>
+        </Snackbar>
       </Container>
     </>
   );

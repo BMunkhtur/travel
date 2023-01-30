@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Grid,
-  Typography,
-  Card,
-  Button,
-  Link,
-  Rating,
-} from "@mui/material";
+import { Box, Typography, Card, Button, Rating } from "@mui/material";
 import CommuteIcon from "@mui/icons-material/Commute";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import BusinessIcon from "@mui/icons-material/Business";
