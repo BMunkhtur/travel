@@ -27,7 +27,8 @@ const Maindata = ({ card }) => {
     </Box>
   );
 };
-const Mainsec = () => {
+
+const Browse = () => {
   const coti = [
     {
       ner: "Hotels",
@@ -92,4 +93,4 @@ const Mainsec = () => {
   );
 };
 
-export default Mainsec;
+export default Browse;

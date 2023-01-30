@@ -17,7 +17,6 @@ const Cardsevendata = ({ card }) => {
         <img src={`${card.imageURL}`} alt="" width={360} height={310} />
       </Box>
       <Box>
-        {" "}
         <Box
           sx={{
             color: "dark",
@@ -33,7 +32,6 @@ const Cardsevendata = ({ card }) => {
           </Box>
 
           <Box sx={{ opacity: 0.5, fontSize: "18px", marginBottom: "5%" }}>
-            {" "}
             {card.time}
           </Box>
         </Box>

@@ -69,7 +69,7 @@ function Navbar(props) {
             trxvl.
           </Typography>
           <Link href="/">
-            <Box sx={{ display: { sm: "block" } }}>
+            <Box sx={{ display: { sm: "block" }, textDecoration: "none" }}>
               {navItems.map((item) => (
                 <Button
                   key={item}
@@ -88,8 +88,9 @@ function Navbar(props) {
               ))}
             </Box>
           </Link>
-          <Switch color="success" onChange={props.changeMode}></Switch>
+
           <LoginMain />
+          <Switch color="success" onChange={props.changeMode}></Switch>
         </Toolbar>
       </AppBar>
       <Box component="nav">

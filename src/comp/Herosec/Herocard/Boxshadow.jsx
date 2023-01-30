@@ -5,10 +5,9 @@ const Boxshadow = () => {
   return (
     <Grid
       sx={{
-        display: "flex",
         width: "100%",
         position: "absolute",
-        top: "88%",
+        bottom: "-2% ",
         zIndex: "0",
         height: "14%",
         background:

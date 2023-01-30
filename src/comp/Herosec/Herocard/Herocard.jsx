@@ -71,7 +71,7 @@ const Herocard = () => {
         </Typography>
       </Grid>
       <Grid sx={{ marginTop: "2%", marginBottom: "3%" }}>
-        <Box sx={{ display: "flex", gap: "6% " }}>
+        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
           {coti.map((card, index) => (
             <Catigor key={index} card={card} />
           ))}

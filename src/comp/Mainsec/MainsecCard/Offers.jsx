@@ -47,7 +47,7 @@ const Cardmainmap = ({ card }) => {
     </Grid>
   );
 };
-const Cardmain = () => {
+const Offers = () => {
   const coti = [
     {
       ner: "Huge savings on flight with trxvl.",
@@ -81,6 +81,8 @@ const Cardmain = () => {
         "&::-webkit-scrollbar": {
           display: "none",
         },
+        marginTop: "20%",
+        marginRight: "0 !important",
       }}
     >
       <Typography
@@ -102,4 +104,4 @@ const Cardmain = () => {
   );
 };
 
-export default Cardmain;
+export default Offers;

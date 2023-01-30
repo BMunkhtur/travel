@@ -33,7 +33,7 @@ const Cardthree = ({ card }) => {
     </Grid>
   );
 };
-const Mainthree = () => {
+const Connect = () => {
   const coti = [
     {
       ner: "India",
@@ -115,4 +115,4 @@ const Mainthree = () => {
   );
 };
 
-export default Mainthree;
+export default Connect;

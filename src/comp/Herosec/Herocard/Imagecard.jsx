@@ -3,27 +3,28 @@ import { Box, Grid, Typography } from "@mui/material";
 
 const ImgCard = ({ card }) => {
   return (
-    <Box
-      sx={{
-        width: "100%",
-        position: "relative",
-        borderRadius: "20px",
-      }}
-    >
-      <img src={`${card.imageURL}`} alt="" width={420} height={310} />
+    <Grid>
       <Box
         sx={{
-          color: "dark",
-          position: "absolute",
-          top: "75%",
-          left: "10%",
-          color: "white",
-          fontSize: "28px",
+          position: "relative",
+          borderRadius: "20px",
         }}
       >
-        {card.ner}
+        <img src={`${card.imageURL}`} alt="" width={420} height={310} />
+        <Box
+          sx={{
+            color: "dark",
+            position: "absolute",
+            top: "75%",
+            left: "10%",
+            color: "white",
+            fontSize: "28px",
+          }}
+        >
+          {card.ner}
+        </Box>
       </Box>
-    </Box>
+    </Grid>
   );
 };
 const Imagecard = () => {
@@ -68,7 +69,6 @@ const Imagecard = () => {
         sx={{
           color: "white",
           fontWeight: "700",
-          width: "900px",
           marginBottom: "2%",
         }}
       >
@@ -76,13 +76,20 @@ const Imagecard = () => {
       </Typography>
       <Grid
         sx={{
-          overflowX: "scroll",
+          overflowX: "auto",
           "&::-webkit-scrollbar": {
             display: "none",
           },
         }}
       >
-        <Box sx={{ display: "flex", gap: "2% ", zIndex: "1" }}>
+        <Box
+          sx={{
+            display: "flex",
+            gap: "2% ",
+            zIndex: "1",
+            justifyContent: "space-between",
+          }}
+        >
           {coti.map((card, index) => (
             <ImgCard key={index} card={card} />
           ))}
