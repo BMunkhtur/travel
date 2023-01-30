@@ -24,10 +24,9 @@ const SignIn = (props) => {
       setOpen(true);
     } else {
       console.log(email, password);
-      navigate("/");
+      navigate("/Detail");
     }
   };
-
   const onClose = () => {
     setOpen(false);
   };
@@ -120,7 +119,7 @@ const SignIn = (props) => {
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
         >
           <Alert severity="error" sx={{ width: "100%" }}>
-            This is a success message!
+            This is a error message!
           </Alert>
         </Snackbar>
       </Container>

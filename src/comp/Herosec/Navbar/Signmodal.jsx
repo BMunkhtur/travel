@@ -32,7 +32,7 @@ const LoginMain = () => {
           lineHeight: "18.4px",
         }}
       >
-        Sign Up
+        Sign in
       </Button>
       <Modal
         open={open}
