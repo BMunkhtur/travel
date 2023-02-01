@@ -12,19 +12,25 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Alert, Snackbar } from "@mui/material";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
+
 const SignIn = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [open, setOpen] = useState(false);
-  const navigate = useNavigate();
+  const newLogged = localStorage.getItem("isLogged");
+  // const [isLogged, setIsLogged] = useState(newLogged);
   const login = () => {
     console.log("login");
     if (email === "" || password === "") {
       setOpen(true);
     } else {
-      console.log(email, password);
-      navigate("/Detail");
+      // console.log(email, password);
+      props.handleClose();
+      props.setIsLogged("true");
+      localStorage.setItem("isLogged", true);
+      // console.log(isLogged);
+      <Navigate replace to="/asd" />;
     }
   };
   const onClose = () => {
@@ -93,6 +99,7 @@ const SignIn = (props) => {
             >
               Sign In
             </Button>
+            {/* <Button onClick={props.handleClose}>asd</Button> */}
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">

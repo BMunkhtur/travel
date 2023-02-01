@@ -7,7 +7,9 @@ import { Routes, Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { ThemeProvider, CreateTheme } from "@emotion/react";
 import { useState } from "react";
-import Another from "./Pages/Another";
+import Anothermain from "./comp/Mainsec/MainsecCard/Anothermain";
+import Beach from "./comp/test/Categories";
+import Footer from "./comp/Footer/Footer";
 
 function App() {
   const [Isdarkmode, setisdarmmode] = useState(false);
@@ -28,10 +30,12 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home changeMode={changeMode} />} />
-            <Route exact path="/Detail" element={<Detail />} />
-            <Route exact path="/Another" element={<Another />} />
+            <Route exact path="/Herocard/:id" element={<Detail />} />
+            <Route exact path="/Anothermain/:id" element={<Anothermain />} />
+            <Route path="/category/:id" element={<Beach />} />
           </Routes>
         </BrowserRouter>
+        <Footer />
       </ThemeProvider>
     </Grid>
   );

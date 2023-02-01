@@ -5,6 +5,7 @@ import SearchInput from "../comp/Herosec/Searchinput/Searchinput";
 import Herocard from "../comp/Herosec/Herocard/Herocard";
 import Boxshadow from "../comp/Herosec/Herocard/Boxshadow";
 import Footer from "../comp/Footer/Footer";
+import { useParams } from "react-router-dom";
 import Anothermain from "../comp/Mainsec/MainsecCard/Anothermain";
 const Another = () => {
   return (

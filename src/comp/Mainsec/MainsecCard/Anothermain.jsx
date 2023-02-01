@@ -29,7 +29,7 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 
-const Anothermain = () => {
+const Anothermain = (Finddata) => {
   return (
     <Card
       sx={{
@@ -51,7 +51,7 @@ const Anothermain = () => {
       >
         <Box>
           <Box sx={{ display: "flex" }}>
-            <Typography variant="h2">Orchard Hotel Singapore</Typography>
+            <Typography variant="h2">{Finddata.title}</Typography>
             <Rating />
             <Box>
               <Typography sx={{ color: "green", fontWeight: "bold" }}>
@@ -61,7 +61,7 @@ const Anothermain = () => {
           </Box>
           <Box sx={{ display: "flex", gap: "10px" }}>
             <LocationOnIcon />
-            <Typography>Orchad, Road, Singapore, 238879, Singapore</Typography>
+            <Typography>{Finddata.bairshil}</Typography>
             <a href=""></a>
             <Typography sx={{ color: "blue", fontWeight: "bold" }}>
               Shop on map
