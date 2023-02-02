@@ -72,13 +72,12 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
             <MenuIcon />
           </IconButton>
           <Typography
-            variant="h4"
+            variant="h3"
             sx={{
               flexGrow: 1,
               fontWeight: "bold",
-              fontSize: { xs: "24px", sm: "32px" },
+              fontSize: { xs: "24px", sm: "40px" },
               marginLeft: { xs: "37%", sm: "0" },
-              color: "gray",
             }}
           >
             trxvl.
@@ -97,14 +96,13 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                   sx={{
                     padding: "0",
                     textTransform: "none",
-                    fontSize: "16px",
+                    fontSize: "24px",
                     color: "white",
-                    margin: "2vw",
+                    margin: "1vw",
                     opacity: i === index ? "1" : "0.9",
                     borderBottom: i === index ? "1px white solid" : "none",
                     borderRadius: "0",
                     "&:hover": { background: "none" },
-                    color: "gray",
                   }}
                   onClick={() => clicked(i)}
                 >
@@ -120,12 +118,11 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                 sx={{
                   padding: "0",
                   fontWeight: "700",
-                  fontSize: "16px",
+                  fontSize: "24px",
                   color: "#fff",
                   textTransform: "none",
                   marginLeft: "2vw",
                   opacity: "0.8",
-                  color: "gray",
                 }}
               >
                 Sign Out
@@ -136,12 +133,11 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                 sx={{
                   padding: "0",
                   fontWeight: "700",
-                  fontSize: "16px",
+                  fontSize: "24px",
                   color: "#fff",
                   textTransform: "none",
                   marginLeft: "2vw",
                   opacity: "0.8",
-                  color: "gray",
                 }}
               >
                 Sign In

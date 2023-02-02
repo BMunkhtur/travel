@@ -148,7 +148,7 @@ const Cardsix = () => {
     },
   ];
   return (
-    <Grid sx={{ marginBottom: "10%", marginTop: "40%" }}>
+    <Grid sx={{ marginBottom: "10%" }}>
       <Typography
         variant="h3"
         sx={{

@@ -28,31 +28,37 @@ const Travelapp = () => {
         position: "relative",
       }}
     >
-      <Container>
+      <Container maxWidth="xl">
         <Box
           sx={{
             top: "0",
             display: "flex",
+            gap: "5%",
           }}
         >
-          <Box sx={{ marginRight: "5%" }}>
+          <Box
+            sx={{
+              marginRight: "5%",
+              position: "relative",
+              top: "8px",
+            }}
+          >
             <img src="/pic/37.png" alt="" />
           </Box>
           <Box sx={{ width: "60%" }}>
             <Typography
               sx={{ fontSize: "48px", fontWeight: "700", color: "white" }}
             >
-              {" "}
               Your all-in-one travel app.
             </Typography>
             <Typography
-              sx={{ fontSize: "24px", fontWeight: "400", color: "white" }}
+              sx={{ fontSize: "24px", fontWeight: "6  00", color: "white" }}
             >
               Book flights, hotels, trains & rental cars anywhere in the world
               in just seconds. Get real-time flight updates, travel info,
               exclusive deals, and 30% more Trip Coins only on the app!
             </Typography>
-            <Box sx={{ display: "flex", marginTop: "5%" }}>
+            <Box sx={{ display: "flex", marginTop: "5%", gap: "60px" }}>
               <Grid>
                 <Box
                   sx={{

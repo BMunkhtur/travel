@@ -9,7 +9,7 @@ const Plan = () => {
           position: "relative",
         }}
       >
-        <img src="/pic/29.png" alt="" width="100%" />
+        <img src="/pic/29.png" alt="" width="95%" />
         <Typography
           sx={{
             color: "white",

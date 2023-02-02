@@ -6,11 +6,10 @@ import Imagecard from "./Herocard/Imagecard";
 import { Container } from "@mui/system";
 import Cateories from "../test/Categories";
 import { useState } from "react";
-const Herosec = () => {
+const Herosec = ({ isCategor, setIsCategor }) => {
   let a = <Imagecard />;
 
-  const [isCategor, setIsCategor] = useState(true);
-  if (isCategor == true) {
+  if (isCategor == "All") {
     a = <Imagecard />;
   } else {
     a = <Cateories ner={isCategor} />;
@@ -31,8 +30,6 @@ const Herosec = () => {
         <SearchInput />
         <Herocard setIsCategor={setIsCategor} />
         {a}
-        {/* <Imagecard />
-        <Cateories /> */}
       </Container>
     </Grid>
   );

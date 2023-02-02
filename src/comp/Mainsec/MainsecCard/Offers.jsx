@@ -6,15 +6,15 @@ const Cardmainmap = ({ card }) => {
     <Grid
       sx={{
         width: "100%",
-        padding: "30px",
         display: "flex",
         gap: "20px",
         borderRadius: "16px",
         boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
         background: "#FFFFFF",
+        padding: "20px 20px 20px 2px",
       }}
     >
-      <Grid>
+      <Grid sx={{ marginLeft: "20px" }}>
         <img src={`${card.imageURL}`} alt="" width={500} />
       </Grid>
       <Grid
@@ -23,6 +23,7 @@ const Cardmainmap = ({ card }) => {
           gap: "30px",
           flexDirection: "column",
           width: "300px",
+          marginLeft: "20px",
         }}
       >
         <Box> {card.type}</Box>
@@ -33,10 +34,9 @@ const Cardmainmap = ({ card }) => {
           sx={{
             borderRadius: "40px",
             backgroundColor: "blue",
-            width: "15vh",
-            height: "20%",
+            width: "200px",
             padding: "5%",
-            marginTop: "1%",
+            marginTop: "10%",
             fontSize: "15px",
             fontWeight: "400",
           }}
@@ -78,12 +78,7 @@ const Offers = () => {
   return (
     <Grid
       sx={{
-        overflowX: "scroll",
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-        marginTop: "10%",
-        marginRight: "0 !important",
+        marginTop: "4%",
       }}
     >
       <Typography
@@ -96,7 +91,17 @@ const Offers = () => {
       >
         Offers
       </Typography>
-      <Box sx={{ display: "flex", gap: "2% ", padding: "20px" }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: "2% ",
+          padding: "20px 20px 20px 2px",
+          overflowX: "scroll",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
         {coti.map((card, index) => (
           <Cardmainmap key={index} card={card} />
         ))}

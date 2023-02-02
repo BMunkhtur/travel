@@ -5,13 +5,13 @@ const Cardthree = ({ card }) => {
   return (
     <Grid
       sx={{
-        padding: "20px ",
+        padding: "20px 20px 20px 2px ",
         borderRadius: "16px",
         boxShadow: "0px 4px 16px rgba(158, 158, 158, 0.25)",
         background: "#FFFFFF",
       }}
     >
-      <Box>
+      <Box sx={{ marginLeft: "20px" }}>
         <img src={`${card.imageURL}`} alt="" width={400} height={310} />
         <Box
           sx={{
@@ -103,7 +103,7 @@ const Connect = () => {
           "&::-webkit-scrollbar": {
             display: "none",
           },
-          padding: "20px",
+          padding: "20px 20px 20px 2px",
           gap: "2%",
         }}
       >

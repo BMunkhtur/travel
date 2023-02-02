@@ -61,7 +61,7 @@ const Footer = () => {
         width: "100%",
       }}
     >
-      <Container>
+      <Container maxWidth="xl">
         <Box>
           <Box>
             <Grid
@@ -86,7 +86,6 @@ const Footer = () => {
                   <Footerdata key={index} card={card} />
                 ))}
               </Box>
-
               <Button
                 variant="outlined"
                 sx={{
@@ -94,7 +93,7 @@ const Footer = () => {
                   textTransform: "capitalize",
                   height: "1%",
                   fontSize: "18px",
-                  marginLeft: "33%",
+                  marginLeft: "31%",
                 }}
               >
                 <Typography
@@ -111,7 +110,7 @@ const Footer = () => {
                   fontSize: "14px",
                   color: "white",
                   opacity: "1",
-                  marginLeft: "33%",
+                  marginLeft: "31%",
                   marginTop: "1%",
                   opacity: "0.5",
                 }}
@@ -126,6 +125,8 @@ const Footer = () => {
                   display: "flex",
                   gap: "20px",
                   marginLeft: "80%",
+                  position: "relative",
+                  top: "-30px",
                 }}
               >
                 <FacebookIcon />

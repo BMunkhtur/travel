@@ -6,6 +6,11 @@ const Herocard = ({ filterData, setIsCategor }) => {
   const coti = [
     {
       id: "1",
+      ner: "All",
+      imageURL: "/pic/2.svg",
+    },
+    {
+      id: "1",
       ner: "Beaches",
       imageURL: "/pic/2.svg",
     },
@@ -69,7 +74,15 @@ const Herocard = ({ filterData, setIsCategor }) => {
           }}
         >
           <img src={`${card.imageURL}`} alt="" width={50} />
-          <Box sx={{ opacity: "0.4", color: "white" }}>{card.ner}</Box>
+          <Box
+            sx={{
+              opacity: "0.4",
+              color: "white",
+              "&:hover": { opacity: "1" },
+            }}
+          >
+            {card.ner}
+          </Box>
         </Box>
       </NavLink>
     );
@@ -86,7 +99,12 @@ const Herocard = ({ filterData, setIsCategor }) => {
         </Typography>
       </Grid>
       <Grid sx={{ marginTop: "2%", marginBottom: "3%" }}>
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+          }}
+        >
           {coti.map((card, index) => (
             <Catigor key={index} card={card} />
           ))}

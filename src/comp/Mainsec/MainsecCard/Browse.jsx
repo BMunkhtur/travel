@@ -64,14 +64,7 @@ const Browse = () => {
     },
   ];
   return (
-    <Grid
-      sx={{
-        overflowX: "scroll",
-        "&::-webkit-scrollbar": {
-          display: "none",
-        },
-      }}
-    >
+    <Grid>
       <Typography
         variant="h4"
         sx={{
@@ -84,7 +77,16 @@ const Browse = () => {
       >
         Browse by property type
       </Typography>
-      <Box sx={{ display: "flex", gap: "2% " }}>
+      <Box
+        sx={{
+          display: "flex",
+          gap: "2% ",
+          overflowX: "scroll",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
         {coti.map((card, index) => (
           <Maindata key={index} card={card} />
         ))}
