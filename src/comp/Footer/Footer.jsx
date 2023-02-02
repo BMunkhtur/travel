@@ -62,7 +62,7 @@ const Footer = () => {
       }}
     >
       <Container>
-        <Box sx={{}}>
+        <Box>
           <Box>
             <Grid
               sx={{
@@ -94,10 +94,9 @@ const Footer = () => {
                   textTransform: "capitalize",
                   height: "1%",
                   fontSize: "18px",
-                  marginLeft: "37%",
+                  marginLeft: "33%",
                 }}
               >
-                {" "}
                 <Typography
                   sx={{
                     color: "white",
@@ -112,7 +111,7 @@ const Footer = () => {
                   fontSize: "14px",
                   color: "white",
                   opacity: "1",
-                  marginLeft: "37%",
+                  marginLeft: "33%",
                   marginTop: "1%",
                   opacity: "0.5",
                 }}

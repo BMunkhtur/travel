@@ -7,7 +7,7 @@ import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import Button from "@mui/material/Button";
-import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarToday";
 import { Grid } from "@mui/material";
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -43,6 +43,9 @@ export default function SearchInput() {
             fontWeight: "600",
             width: "600px",
             fontSize: "64px",
+            height: "300px",
+            display: "flex",
+            alignItems: "flex-end",
           }}
         >
           The whole world awaits.
@@ -55,66 +58,135 @@ export default function SearchInput() {
           borderRadius: "40px",
           backdropFilter: "blur(15px)",
           marginBottom: "3%",
+          padding: { xs: "4px 0", md: "8px 16px" },
         }}
       >
-        <Toolbar>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-
+        <Grid
+          container
+          sx={{
+            alignItems: "center",
+            height: "fit-content",
+            display: "flex",
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              minHeight: "36px",
+              margin: { xs: "5px 0", md: "0" },
+              display: "flex",
+              justifyContent: { xs: "center", md: "flex-start" },
+              backgroundColor: {
+                xs: "rgba(255, 255, 255, 0.4)",
+                md: "transparent",
+              },
+              borderRadius: { xs: "2rem", md: "none" },
+            }}
+          >
+            <SearchIcon
+              sx={{ color: "white", opacity: "0.7", alignSelf: "center" }}
+            />
+            <StyledInputBase
+              sx={{
+                minWidth: "300px",
+              }}
+              type="search"
+              placeholder="Search destinations, hotels"
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{
+              minHeight: "36px",
+              margin: { xs: "5px 0", md: "0" },
+              display: "flex",
+              justifyContent: "space-around",
+              backgroundColor: {
+                xs: "rgba(255, 255, 255, 0.4)",
+                md: "transparent",
+              },
+              borderRadius: { xs: "2rem", md: "none" },
+            }}
+          >
+            <Grid sx={{ display: "flex", alignItems: "center" }}>
+              <CalendarTodayOutlinedIcon
+                sx={{ color: "white", opacity: "0.7" }}
+              />
+              <Typography sx={{ color: "white", opacity: "0.7" }}>
+                Check in
+              </Typography>
+            </Grid>
             <Box
               sx={{
-                width: "100%",
-                flexDirection: "row",
-                display: "flex",
-                gap: "10%",
+                fontSize: "20px",
+                fontWeight: "lighter",
+                color: "white",
+                opacity: "0.7",
+                display: { xs: "block", md: "none" },
               }}
             >
-              <StyledInputBase
-                placeholder="Search destinations, hotels"
-                inputProps={{ "aria-label": "search" }}
-              />{" "}
-              <Box
-                sx={{
-                  marginTop: "2%",
-                  color: "white",
-                }}
-              >
-                <Typography>
-                  {" "}
-                  <CalendarTodayIcon /> Check in
-                </Typography>
-              </Box>
-              <Box sx={{ marginTop: "2%", color: "white" }}>
-                <Typography>
-                  <CalendarTodayIcon /> Check out
-                </Typography>
-              </Box>
-              <Box sx={{ marginTop: "2%", color: "white" }}>
-                <Typography>
-                  {" "}
-                  <PersonIcon /> 1 room, 2 adultst
-                </Typography>
-              </Box>
-              <Button
-                sx={{
-                  borderRadius: "40px",
-                  backgroundColor: "white",
-                  width: "15%",
-                  height: "1%",
-                  padding: "1%",
-                  marginTop: "1%",
-                  fontSize: "18px",
-                  fontWeight: "400",
-                }}
-                color="primary"
-              >
-                Search
-              </Button>
+              &#124;
             </Box>
-          </Search>
-        </Toolbar>
+            <Grid sx={{ display: "flex", alignItems: "center" }}>
+              <CalendarTodayOutlinedIcon
+                sx={{ color: "white", opacity: "0.7" }}
+              />
+              <Typography sx={{ color: "white", opacity: "0.7" }}>
+                Check out
+              </Typography>
+            </Grid>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={2}
+            sx={{
+              minHeight: "36px",
+              margin: { xs: "5px 0", md: "0" },
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: {
+                xs: "rgba(255, 255, 255, 0.4)",
+                md: "transparent",
+              },
+              borderRadius: { xs: "2rem", md: "none" },
+            }}
+          >
+            <PersonIcon sx={{ color: "white", opacity: "0.7" }} />
+            <Typography
+              sx={{ lineHeight: "1rem", color: "white", opacity: "0.7" }}
+            >
+              1 room, 2 adults
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={2}
+            sx={{ minHeight: "36px", margin: { xs: "5px 0", md: "0" } }}
+          >
+            <Button
+              variant="contained"
+              sx={{
+                "&:hover": { color: "white" },
+                color: "#2659C3",
+                backgroundColor: "white",
+                textTransform: "none",
+                fontWeight: "bold",
+                borderRadius: "2rem",
+                width: "100%",
+                boxShadow: "none",
+              }}
+            >
+              Search
+            </Button>
+          </Grid>
+        </Grid>
       </Grid>
     </Box>
   );

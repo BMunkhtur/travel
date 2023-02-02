@@ -1,13 +1,20 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import Navbar from "./Navbar";
 import SearchInput from "./Searchinput/Searchinput";
 import Herocard from "./Herocard/Herocard";
 import Imagecard from "./Herocard/Imagecard";
-import Boxshadow from "./Herocard/Boxshadow";
 import { Container } from "@mui/system";
-
+import Cateories from "../test/Categories";
+import { useState } from "react";
 const Herosec = () => {
+  let a = <Imagecard />;
+
+  const [isCategor, setIsCategor] = useState(true);
+  if (isCategor == true) {
+    a = <Imagecard />;
+  } else {
+    a = <Cateories ner={isCategor} />;
+  }
   return (
     <Grid
       sx={{
@@ -20,11 +27,12 @@ const Herosec = () => {
         boxShadow: " 0px -200px 60px -50px rgba(255,255,255) inset",
       }}
     >
-      <Navbar />
       <Container maxWidth="xl">
         <SearchInput />
-        <Herocard />
-        <Imagecard />
+        <Herocard setIsCategor={setIsCategor} />
+        {a}
+        {/* <Imagecard />
+        <Cateories /> */}
       </Container>
     </Grid>
   );

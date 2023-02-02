@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import datas from "./Datas";
 
-const Beach = () => {
-  const { id } = useParams();
-  const filteredData = datas.filter((data) => data.category === id);
+const Beach = ({ ner }) => {
+  // const { id } = useParams();
+  const filteredData = datas.filter((data) => data.category === ner);
   return (
     <Grid sx={{ display: "flex", gap: "1rem", margin: "10%" }}>
       {filteredData.map((filterData, index) => (

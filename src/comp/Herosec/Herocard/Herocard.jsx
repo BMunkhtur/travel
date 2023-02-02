@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
 
-const Herocard = ({ filterData }) => {
+const Herocard = ({ filterData, setIsCategor }) => {
   const coti = [
     {
       id: "1",
@@ -57,8 +57,11 @@ const Herocard = ({ filterData }) => {
   ];
   const Catigor = ({ card }) => {
     return (
-      <NavLink to={"category/" + card.ner}>
+      <NavLink>
         <Box
+          onClick={() => {
+            setIsCategor(card.ner);
+          }}
           sx={{
             display: "block",
             textAlign: "center",
