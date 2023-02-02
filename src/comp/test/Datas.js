@@ -1,6 +1,6 @@
 export const datas = [
   {
-    imgUTL: "../img/category/beach/Beachhouse.png",
+    imgUTL: "../pic/15.png",
     title: "Beach House",
     bairsgil: "Vietnam",
     tovch: "Vieetnamese",
@@ -10,7 +10,7 @@ export const datas = [
     price: "$88.92",
   },
   {
-    imgUTL: "../img/category/beach/beach2.png",
+    imgUTL: "../pic/14.png",
     title: "Beach Bar",
     bairsgil: "Sanya China",
     tovch: "Bakeries",
@@ -21,7 +21,7 @@ export const datas = [
     day: "3day 2night",
   },
   {
-    imgUTL: "../img/category/beach/beach3.png",
+    imgUTL: "../pic/15.png",
     title: "Beachhouse at the Moana",
     bairsgil: "United States",
     tovch: "American",
@@ -32,7 +32,7 @@ export const datas = [
     day: "2day 1night",
   },
   {
-    imgUTL: "../img/category/beach/beach4.png",
+    imgUTL: "../pic/15.png",
     title: "Beach Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "american",
@@ -43,7 +43,7 @@ export const datas = [
     day: "3day 2 night",
   },
   {
-    imgUTL: "../img/category/desert/2.png",
+    imgUTL: "../pic/15.png",
     title: "Desert Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Mediterranean",
@@ -54,7 +54,7 @@ export const datas = [
     day: "3day 2 night",
   },
   {
-    imgUTL: "../img/category/desert/1.png",
+    imgUTL: "../pic/15.png",
     title: "Desert Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -65,7 +65,7 @@ export const datas = [
     day: "2 day 1 night",
   },
   {
-    imgUTL: "../img/category/desert/3.png",
+    imgUTL: "../pic/15.png",
     title: "Desert Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "american",
@@ -76,7 +76,7 @@ export const datas = [
     day: "3day 2 night",
   },
   {
-    imgUTL: "../img/category/desert/4.png",
+    imgUTL: "../pic/15.png",
     title: "Desert Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -87,7 +87,7 @@ export const datas = [
     day: "4 day 3 night",
   },
   {
-    imgUTL: "../img/category/mountain/aconcagua.png",
+    imgUTL: "../pic/15.png",
     title: "Mountain Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -98,7 +98,7 @@ export const datas = [
     day: "3day 2night",
   },
   {
-    imgUTL: "../img/category/mountain/chimborazo.png",
+    imgUTL: "../pic/15.png",
     title: "Mountain Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -109,7 +109,7 @@ export const datas = [
     day: "4day 3 night",
   },
   {
-    imgUTL: "../img/category/mountain/denali.png",
+    imgUTL: "../pic/15.png",
     title: "Mountain Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -120,7 +120,7 @@ export const datas = [
     day: "2 day 1 night",
   },
   {
-    imgUTL: "../img/category/mountain/guardian.png",
+    imgUTL: "../pic/15.png",
     title: "Mountain Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -131,7 +131,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/iconic/dubai.png",
+    imgUTL: "../pic/15.png",
     title: "Dubai",
     bairsgil: "Dubai",
     tovch: "Bars",
@@ -142,7 +142,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/iconic/korea.png",
+    imgUTL: "../pic/15.png",
     title: "South Korea",
     bairsgil: "South Korea",
     tovch: "Bars",
@@ -153,7 +153,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/iconic/london.png",
+    imgUTL: "../pic/15.png",
     title: "London",
     bairsgil: "London",
     tovch: "Bars",
@@ -164,7 +164,7 @@ export const datas = [
     day: "2day 1 night",
   },
   {
-    imgUTL: "../img/category/iconic/spain.png",
+    imgUTL: "../pic/15.png",
     title: "Spain",
     bairsgil: "Spain",
     tovch: "Bars",
@@ -175,7 +175,7 @@ export const datas = [
     day: "2day 1night",
   },
   {
-    imgUTL: "../img/category/House/1.png",
+    imgUTL: "../pic/15.png",
     title: "Dubai",
     bairsgil: "Dubai",
     tovch: "Bars",
@@ -186,7 +186,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/House/2.png",
+    imgUTL: "../pic/15.png",
     title: "South Korea",
     bairsgil: "South Korea",
     tovch: "Bars",
@@ -197,7 +197,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/House/3.png",
+    imgUTL: "../pic/15.png",
     title: "London",
     bairsgil: "London",
     tovch: "Bars",
@@ -208,7 +208,7 @@ export const datas = [
     day: "2day 1 night",
   },
   {
-    imgUTL: "../img/category/House/4.png",
+    imgUTL: "../pic/15.png",
     title: "Spain",
     bairsgil: "Spain",
     tovch: "Bars",
@@ -219,7 +219,7 @@ export const datas = [
     day: "2day 1night",
   },
   {
-    imgUTL: "../img/category/country/1.png",
+    imgUTL: "../pic/15.png",
     title: "Country Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bistros",
@@ -230,7 +230,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/country/2.jpg",
+    imgUTL: "../pic/15.png",
     title: "Country Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "American",
@@ -241,7 +241,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/country/3.jpg",
+    imgUTL: "../pic/15.png",
     title: "Country Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Shopping",
@@ -252,7 +252,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/country/4.jpg",
+    imgUTL: "../pic/15.png",
     title: "Country Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "",
@@ -263,7 +263,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/camping/1.jpg",
+    imgUTL: "../pic/15.png",
     title: "Camping Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -274,7 +274,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/camping/2.jpg",
+    imgUTL: "../pic/15.png",
     title: "Camping Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -285,7 +285,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/camping/3.jpg",
+    imgUTL: "../pic/15.png",
     title: "Camping Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -296,7 +296,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/camping/4.jpg",
+    imgUTL: "../pic/15.png",
     title: "Camping Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -307,7 +307,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/castles/1.jpg",
+    imgUTL: "../pic/15.png",
     title: "Castles Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -318,7 +318,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/castles/2.jpg",
+    imgUTL: "../pic/15.png",
     title: "Castles Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -329,7 +329,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/castles/3.jpg",
+    imgUTL: "../pic/15.png",
     title: "Castles Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -340,7 +340,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/castles/4.jpg",
+    imgUTL: "../pic/15.png",
     title: "Castles Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -351,7 +351,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/ski/1.jpg",
+    imgUTL: "../pic/15.png",
     title: "Ski Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -362,7 +362,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/ski/2.jpg",
+    imgUTL: "../pic/15.png",
     title: "Ski Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -373,7 +373,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/ski/3.jpg",
+    imgUTL: "../pic/15.png",
     title: "Ski Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -384,7 +384,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/ski/4.jpg",
+    imgUTL: "../pic/15.png",
     title: "Ski Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -395,7 +395,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/tropical/2.jpg",
+    imgUTL: "../pic/15.png",
     title: "Tropical Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -406,7 +406,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/tropical/1.jpg",
+    imgUTL: "../pic/15.png",
     title: "Tropical Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -417,7 +417,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/tropical/4.jpg",
+    imgUTL: "../pic/15.png",
     title: "Tropical Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",
@@ -428,7 +428,7 @@ export const datas = [
     day: "1day",
   },
   {
-    imgUTL: "../img/category/tropical/3.jpg",
+    imgUTL: "../pic/15.png",
     title: "Tropical Club",
     bairsgil: "Kuala Mayaysia",
     tovch: "Bars",

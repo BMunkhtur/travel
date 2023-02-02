@@ -1,37 +1,35 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Grid } from "@mui/material";
+import { Grid, Box } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { useParams } from "react-router-dom";
 import datas from "./Datas";
-
 const Beach = ({ ner }) => {
-  // const { id } = useParams();
   const filteredData = datas.filter((data) => data.category === ner);
   return (
-    <Grid sx={{ display: "flex", gap: "1rem", margin: "10%" }}>
+    <Grid sx={{ display: "flex", gap: "2%" }}>
       {filteredData.map((filterData, index) => (
-        <Card key={index} sx={{ maxWidth: 345 }}>
+        <Card
+          key={index}
+          sx={{ width: "420px", borderRadius: "20px", padding: "20px" }}
+        >
           <CardMedia
-            sx={{ height: 140, width: 400 }}
+            sx={{ height: 280, width: "100%", borderRadius: "20px" }}
             image={filterData.imgUTL}
             title="green iguana"
           />
-          <CardContent>
+          <Box>
             <Typography gutterBottom variant="h5" component="div">
               {filterData.title}
             </Typography>
             <Typography variant="body2" color="text.secondary">
               {filterData.bairsgil}
             </Typography>
-          </CardContent>
-          <CardActions>
+          </Box>
+          <Box>
             <Link to={"/Anothermain/" + filterData.id}>{filterData.tovch}</Link>
-          </CardActions>
+          </Box>
         </Card>
       ))}
     </Grid>

@@ -78,6 +78,7 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
               fontWeight: "bold",
               fontSize: { xs: "24px", sm: "32px" },
               marginLeft: { xs: "37%", sm: "0" },
+              color: "gray",
             }}
           >
             trxvl.
@@ -99,10 +100,11 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                     fontSize: "16px",
                     color: "white",
                     margin: "2vw",
-                    opacity: i === index ? "1" : "0.7",
+                    opacity: i === index ? "1" : "0.9",
                     borderBottom: i === index ? "1px white solid" : "none",
                     borderRadius: "0",
                     "&:hover": { background: "none" },
+                    color: "gray",
                   }}
                   onClick={() => clicked(i)}
                 >
@@ -123,6 +125,7 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                   textTransform: "none",
                   marginLeft: "2vw",
                   opacity: "0.8",
+                  color: "gray",
                 }}
               >
                 Sign Out
@@ -138,6 +141,7 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                   textTransform: "none",
                   marginLeft: "2vw",
                   opacity: "0.8",
+                  color: "gray",
                 }}
               >
                 Sign In
