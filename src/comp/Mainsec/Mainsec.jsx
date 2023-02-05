@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Box } from "@mui/material";
 import Offers from "./MainsecCard/Offers";
 import Browse from "./MainsecCard/Browse";
 import Plan from "./MainAssi/Plan";
@@ -8,12 +8,16 @@ import Travelapp from "./MainAssi/Travelapp";
 const Mainsec = () => {
   return (
     <Grid>
-      <Container maxWidth="xl">
+      <Box sx={{ marginLeft: "11%" }}>
         <Offers />
         <Browse />
+      </Box>
+      <Container maxWidth="xl">
         <Plan />
-        <Connect />
       </Container>
+      <Box sx={{ marginLeft: "11%" }}>
+        <Connect />
+      </Box>
       <Travelapp />
     </Grid>
   );

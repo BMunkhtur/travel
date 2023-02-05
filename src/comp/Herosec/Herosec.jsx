@@ -5,10 +5,8 @@ import Herocard from "./Herocard/Herocard";
 import Imagecard from "./Herocard/Imagecard";
 import { Container } from "@mui/system";
 import Cateories from "../test/Categories";
-import { useState } from "react";
 const Herosec = ({ isCategor, setIsCategor }) => {
   let a = <Imagecard />;
-
   if (isCategor == "All") {
     a = <Imagecard />;
   } else {
@@ -23,16 +21,15 @@ const Herosec = ({ isCategor, setIsCategor }) => {
         width: "100%",
         height: "100%",
         zIndex: "-100 ",
-        boxShadow: " 0px -200px 60px -50px rgba(255,255,255) inset",
+        boxShadow: " 0px -200px 60px -50px rgba(240,255,255) inset",
       }}
     >
       <Container maxWidth="xl">
         <SearchInput />
         <Herocard setIsCategor={setIsCategor} />
-        {a}
       </Container>
+      <Grid sx={{ marginLeft: "11%" }}> {a}</Grid>
     </Grid>
   );
 };
-
 export default Herosec;

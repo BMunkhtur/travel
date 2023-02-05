@@ -8,7 +8,7 @@ const Beach = ({ ner }) => {
   return (
     <Grid>
       <Typography
-        variant="h3"
+        variant="h4"
         sx={{
           color: "white",
           fontWeight: "700",

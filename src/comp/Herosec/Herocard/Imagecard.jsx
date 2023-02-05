@@ -87,7 +87,6 @@ const Imagecard = () => {
             display: "flex",
             gap: "2% ",
             zIndex: "1",
-            justifyContent: "space-between",
           }}
         >
           {coti.map((card, index) => (

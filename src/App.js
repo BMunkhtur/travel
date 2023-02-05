@@ -51,7 +51,10 @@ function App() {
     setisdarmmode(!Isdarkmode);
   };
   return (
-    <Grid className="App">
+    <Grid
+      className="App"
+      sx={{ maxWidth: "1900px", margin: "auto", backgroundColor: "azure" }}
+    >
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Navbar
