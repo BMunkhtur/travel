@@ -6,7 +6,14 @@ import { Link } from "react-router-dom";
 const Beach = ({ ner }) => {
   const filteredData = datas.filter((data) => data.category === ner);
   return (
-    <Grid>
+    <Grid
+      sx={{
+        overflowX: "scroll",
+        "&::-webkit-scrollbar": {
+          display: "none",
+        },
+      }}
+    >
       <Typography
         variant="h4"
         sx={{

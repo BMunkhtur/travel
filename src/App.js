@@ -11,13 +11,11 @@ import Anothermain from "./comp/Mainsec/MainsecCard/Anothermain";
 import Beach from "./comp/test/Categories";
 import Footer from "./comp/Footer/Footer";
 import Navbar from "./comp/Herosec/Navbar/index";
-
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   const login = async (email, password) => {
     try {
       const res = await axios.post("http://localhost:8000/signin", {
@@ -77,5 +75,4 @@ function App() {
     </Grid>
   );
 }
-
 export default App;
