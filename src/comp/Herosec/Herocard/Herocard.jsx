@@ -1,65 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import { NavLink } from "react-router-dom";
-
+import axios from "axios";
 const Herocard = ({ filterData, setIsCategor }) => {
-  const coti = [
-    {
-      id: "1",
-      ner: "All",
-      imageURL: "/pic/2.svg",
-    },
-    {
-      id: "1",
-      ner: "Beaches",
-      imageURL: "/pic/2.svg",
-    },
-    {
-      id: "2",
-      ner: "Deserts",
-      imageURL: "/pic/3.svg",
-    },
-    {
-      id: "3",
-      ner: "Mountains",
-      imageURL: "/pic/4.svg",
-    },
-    {
-      id: "4",
-      ner: "Iconic Cities",
-      imageURL: "/pic/5.svg",
-    },
-    {
-      id: "5",
-      ner: "Houseboats",
-      imageURL: "/pic/6.svg",
-    },
-    {
-      id: "6",
-      ner: "Countryside",
-      imageURL: "/pic/7.svg",
-    },
-    {
-      id: "7",
-      ner: "Camping",
-      imageURL: "/pic/8.svg",
-    },
-    {
-      id: "8",
-      ner: "Castles",
-      imageURL: "/pic/9.svg",
-    },
-    {
-      id: "9",
-      ner: "Skiing",
-      imageURL: "/pic/10.svg",
-    },
-    {
-      id: "10",
-      ner: "Tropical",
-      imageURL: "/pic/11.svg",
-    },
-  ];
+  const [categories, setCategories] = useState([]);
+  const fetchgories = async () => {
+    try {
+      const res = await axios.get("http://localhost:8000/categories");
+      setCategories(res.data.data.categories);
+      console.log(res.data.data.categories);
+    } catch (err) {}
+  };
+  useEffect(() => {
+    fetchgories();
+  }, []);
+
   const Catigor = ({ card }) => {
     return (
       <NavLink>
@@ -105,7 +60,7 @@ const Herocard = ({ filterData, setIsCategor }) => {
             justifyContent: "space-between",
           }}
         >
-          {coti.map((card, index) => (
+          {categories.map((card, index) => (
             <Catigor key={index} card={card} />
           ))}
         </Box>

@@ -63,6 +63,7 @@ function App() {
             handleClose={handleClose}
             handleOpen={handleOpen}
           />
+
           <Routes>
             <Route path="/" element={<Home changeMode={changeMode} />} />
             <Route exact path="/Herocard/:id" element={<Detail />} />

@@ -22,6 +22,11 @@ const SignIn = ({ login, setSignIn }) => {
   const [isAlert, setIsAlert] = useState(false);
   const navigate = useNavigate();
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+    }
+  };
+
   const changeEmail = (e) => {
     setEmail(e.target.value);
     // console.log(e.target.value);
@@ -92,6 +97,7 @@ const SignIn = ({ login, setSignIn }) => {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
             onClick={handleClick}
+            onKeyDown={handleKeyDown}
           >
             НЭВТРЭХ
           </Button>

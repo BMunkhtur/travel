@@ -83,6 +83,7 @@ const Imagecard = () => {
         }}
       >
         <Box
+          md={1}
           sx={{
             display: "flex",
             gap: "2% ",

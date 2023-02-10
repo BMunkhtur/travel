@@ -16,11 +16,33 @@ import { Button, Modal } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import Login from "./Auth/Login";
 import React, { useState } from "react";
+import Menu from "@mui/material/Menu";
+import Avatar from "@mui/material/Avatar";
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
 
 const drawerWidth = 240;
 const navItems = ["Home", "Stays", "Flight", "Packages"];
+const settings = ["Profile", "Account", "Dashboard", "Sign in"];
 
 function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
+
   const [mobileOpen, setMobileOpen] = useState(false);
   const [index, setIndex] = useState(0);
 
@@ -110,6 +132,39 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                 </Button>
               </NavLink>
             ))}
+            <Box sx={{ flexGrow: 0 }}>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="https://cdn.pixabay.com/photo/2021/07/02/04/48/user-6380868_1280.png"
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {settings.map((setting) => (
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center">{setting}</Typography>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+
             {user ? (
               <Button
                 onClick={() => {
@@ -140,7 +195,7 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
                   opacity: "0.8",
                 }}
               >
-                Sign In
+                Sign in
               </Button>
             )}
           </Box>
