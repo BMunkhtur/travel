@@ -27,7 +27,7 @@ const ImgCard = ({ card }) => {
     </Grid>
   );
 };
-const Imagecard = () => {
+const Imagecard = ({ datas }) => {
   const coti = [
     {
       ner: "Bali, Indonesia",

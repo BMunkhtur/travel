@@ -1,7 +1,6 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from "@mui/icons-material/Search";
@@ -15,7 +14,6 @@ const Search = styled("div")(({ theme }) => ({
   marginLeft: 0,
   width: "100%",
 }));
-
 const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
   height: "100%",
@@ -33,7 +31,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function SearchInput() {
+export default function SearchInput({ handleChange }) {
   return (
     <Box>
       <Grid sx={{ marginBottom: "2%" }}>
@@ -91,7 +89,9 @@ export default function SearchInput() {
             <StyledInputBase
               sx={{
                 minWidth: "300px",
+                height: "40px",
               }}
+              onChange={(e) => handleChange(e)}
               type="search"
               placeholder="Search destinations, hotels"
             />

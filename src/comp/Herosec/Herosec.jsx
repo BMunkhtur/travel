@@ -5,10 +5,21 @@ import Herocard from "./Herocard/Herocard";
 import Imagecard from "./Herocard/Imagecard";
 import { Container } from "@mui/system";
 import Cateories from "../test/Categories";
+import datas from "../test/Datas";
+import { useState } from "react";
 const Herosec = ({ isCategor, setIsCategor }) => {
+  const [catList, setCatList] = useState(datas);
+  const handleChange = (e) => {
+    console.log(e.target.value);
+    const chnge = datas.filter((book) =>
+      book.category.toLowerCase().includes(e.target.value)
+    );
+    console.log(chnge);
+    setCatList(chnge);
+  };
   let a = <Imagecard />;
   if (isCategor == "All") {
-    a = <Imagecard />;
+    a = <Imagecard datas={catList} />;
   } else {
     a = <Cateories ner={isCategor} />;
   }
@@ -25,7 +36,7 @@ const Herosec = ({ isCategor, setIsCategor }) => {
       }}
     >
       <Container maxWidth="xl">
-        <SearchInput />
+        <SearchInput handleChange={handleChange} />
         <Herocard setIsCategor={setIsCategor} />
       </Container>
       <Grid sx={{ marginLeft: "11%" }}> {a}</Grid>
