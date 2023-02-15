@@ -7,19 +7,18 @@ import { Container } from "@mui/system";
 import Cateories from "../test/Categories";
 import datas from "../test/Datas";
 import { useState } from "react";
+
 const Herosec = ({ isCategor, setIsCategor }) => {
   const [catList, setCatList] = useState(datas);
   const handleChange = (e) => {
-    console.log(e.target.value);
-    const chnge = datas.filter((book) =>
-      book.category.toLowerCase().includes(e.target.value)
+    const chnge = datas.filter((data) =>
+      data.category.toLowerCase().includes(e.target.value)
     );
-    console.log(chnge);
     setCatList(chnge);
   };
   let a = <Imagecard />;
   if (isCategor == "All") {
-    a = <Imagecard datas={catList} />;
+    a = <Imagecard />;
   } else {
     a = <Cateories ner={isCategor} />;
   }

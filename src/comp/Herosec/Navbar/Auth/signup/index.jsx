@@ -51,7 +51,7 @@ const SignUp = (props) => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/signup", {
+      const res = await axios.post("http://localhost:8000/users/signup", {
         name,
         email,
         password,

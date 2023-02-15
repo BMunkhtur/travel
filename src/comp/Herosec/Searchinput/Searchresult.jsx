@@ -27,7 +27,7 @@ const ImgCard = ({ card }) => {
     </Grid>
   );
 };
-const Imagecard = () => {
+const Searchresult = () => {
   const coti = [
     {
       ner: "Bali, Indonesia",
@@ -99,4 +99,4 @@ const Imagecard = () => {
   );
 };
 
-export default Imagecard;
+export default Searchresult;
