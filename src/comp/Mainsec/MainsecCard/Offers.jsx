@@ -1,5 +1,5 @@
 import React from "react";
-import Modal from "./modal";
+
 import { Box, Grid, Typography, Button } from "@mui/material";
 
 const Cardmainmap = ({ card }) => {
@@ -41,8 +41,9 @@ const Cardmainmap = ({ card }) => {
             fontWeight: "400",
           }}
           color="info"
+          href="/Stepper"
         >
-          <Modal />
+          {/* <Modal /> */}
         </Button>
       </Grid>
     </Grid>

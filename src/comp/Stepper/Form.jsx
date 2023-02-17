@@ -15,7 +15,6 @@ function Form() {
     nationality: "",
     other: "",
   });
-
   const FormTitles = ["Sign Up", "Personal Info", "Other"];
 
   const PageDisplay = () => {

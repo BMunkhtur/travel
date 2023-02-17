@@ -1,67 +1,44 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Grid, Typography } from "@mui/material";
+import axios from "axios";
 
-const ImgCard = ({ card }) => {
-  return (
-    <Grid>
-      <Box
-        sx={{
-          position: "relative",
-          borderRadius: "20px",
-        }}
-      >
-        <img src={`${card.imageURL}`} alt="" width={420} height={310} />
+const ImageCard = () => {
+  const [imageCard, setImageCard] = useState([]);
+  const imgCard = async () => {
+    try {
+      const res = await axios.get("http://localhost:8000/data/imageCard");
+      setImageCard(res.data.imageCard);
+    } catch (err) {}
+  };
+  useEffect(() => {
+    imgCard();
+  }, []);
+  const ImgCard = ({ card }) => {
+    return (
+      <Grid>
         <Box
           sx={{
-            color: "dark",
-            position: "absolute",
-            top: "75%",
-            left: "10%",
-            color: "white",
-            fontSize: "28px",
+            position: "relative",
+            borderRadius: "20px",
           }}
         >
-          {card.ner}
+          <img src={`${card.imageURL}`} alt="" width={420} height={310} />
+          <Box
+            sx={{
+              color: "dark",
+              position: "absolute",
+              top: "75%",
+              left: "10%",
+              color: "white",
+              fontSize: "28px",
+            }}
+          >
+            {card.ner}
+          </Box>
         </Box>
-      </Box>
-    </Grid>
-  );
-};
-const Imagecard = () => {
-  const coti = [
-    {
-      ner: "Bali, Indonesia",
-      imageURL: "/pic/15.png",
-    },
-    {
-      ner: "Kerry, Ireland",
-      imageURL: "/pic/14.png",
-    },
-    {
-      ner: "Sydney, Australia",
-      imageURL: "/pic/13.png",
-    },
-    {
-      ner: "Paris, France",
-      imageURL: "/pic/22.png",
-    },
-    {
-      ner: "Bali, Indonesia",
-      imageURL: "/pic/15.png",
-    },
-    {
-      ner: "Kerry, Ireland",
-      imageURL: "/pic/14.png",
-    },
-    {
-      ner: "Sydney, Australia",
-      imageURL: "/pic/13.png",
-    },
-    {
-      ner: "Paris, France",
-      imageURL: "/pic/22.png",
-    },
-  ];
+      </Grid>
+    );
+  };
   return (
     <Grid>
       <Typography
@@ -90,7 +67,7 @@ const Imagecard = () => {
             zIndex: "1",
           }}
         >
-          {coti.map((card, index) => (
+          {imageCard.map((card, index) => (
             <ImgCard key={index} card={card} />
           ))}
         </Box>
@@ -99,4 +76,4 @@ const Imagecard = () => {
   );
 };
 
-export default Imagecard;
+export default ImageCard;

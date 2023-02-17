@@ -11,6 +11,7 @@ import Anothermain from "./comp/Mainsec/MainsecCard/Anothermain";
 import Beach from "./comp/test/Categories";
 import Footer from "./comp/Footer/Footer";
 import Navbar from "./comp/Herosec/Navbar/index";
+import Stepper from "./comp/Stepper/Stepper.jsx";
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [open, setOpen] = React.useState(false);
@@ -68,6 +69,8 @@ function App() {
             <Route exact path="/Herocard/:id" element={<Detail />} />
             <Route exact path="/Anothermain/:id" element={<Anothermain />} />
             <Route path="/category/:id" element={<Beach />} />
+            
+            <Route path="/Stepper" element={<Stepper />} />
           </Routes>
         </BrowserRouter>
         <Footer />
