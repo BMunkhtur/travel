@@ -6,7 +6,7 @@ const Herocard = ({ filterData, setIsCategor }) => {
   const [categories, setCategories] = useState([]);
   const fetchgories = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/data/categories");
+      const res = await axios.get("http://localhost:8000/categories");
       setCategories(res.data.data.categories);
       console.log(res.data.data.categories);
     } catch (err) {}

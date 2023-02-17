@@ -6,7 +6,7 @@ const ImageCard = () => {
   const [imageCard, setImageCard] = useState([]);
   const imgCard = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/data/imageCard");
+      const res = await axios.get("http://localhost:8000/imageCard");
       setImageCard(res.data.imageCard);
     } catch (err) {}
   };
