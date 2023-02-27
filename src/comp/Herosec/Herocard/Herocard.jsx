@@ -14,7 +14,6 @@ const Herocard = ({ filterData, setIsCategor }) => {
   useEffect(() => {
     fetchgories();
   }, []);
-
   const Catigor = ({ card }) => {
     return (
       <NavLink>

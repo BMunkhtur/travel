@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
-
 function Form() {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
@@ -16,7 +15,6 @@ function Form() {
     other: "",
   });
   const FormTitles = ["Sign Up", "Personal Info", "Other"];
-
   const PageDisplay = () => {
     if (page === 0) {
       return <SignUpInfo formData={formData} setFormData={setFormData} />;
@@ -26,7 +24,6 @@ function Form() {
       return <OtherInfo formData={formData} setFormData={setFormData} />;
     }
   };
-
   return (
     <div className="form">
       <div className="progressbar">
@@ -65,5 +62,4 @@ function Form() {
     </div>
   );
 }
-
 export default Form;

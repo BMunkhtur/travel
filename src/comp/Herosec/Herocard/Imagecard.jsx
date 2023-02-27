@@ -4,14 +4,15 @@ import axios from "axios";
 
 const ImageCard = () => {
   const [imageCard, setImageCard] = useState([]);
-  const imgCard = async () => {
+  const fetchimgCard = async () => {
     try {
       const res = await axios.get("http://localhost:8000/imageCard");
-      setImageCard(res.data.imageCard);
+      setImageCard(res.data.data.imageCard);
+      console.log(res.data.imageCard);
     } catch (err) {}
   };
   useEffect(() => {
-    imgCard();
+    fetchimgCard();
   }, []);
   const ImgCard = ({ card }) => {
     return (

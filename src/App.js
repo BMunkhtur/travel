@@ -69,7 +69,7 @@ function App() {
             <Route exact path="/Herocard/:id" element={<Detail />} />
             <Route exact path="/Anothermain/:id" element={<Anothermain />} />
             <Route path="/category/:id" element={<Beach />} />
-            
+
             <Route path="/Stepper" element={<Stepper />} />
           </Routes>
         </BrowserRouter>

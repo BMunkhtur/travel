@@ -1,5 +1,4 @@
 import React from "react";
-
 function OtherInfo({ formData, setFormData }) {
   return (
     <div className="other-info-container">

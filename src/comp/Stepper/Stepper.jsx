@@ -5,16 +5,15 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { TextField } from "@mui/material";
+import { TextField, Grid } from "@mui/material";
 import { Container } from "@mui/system";
-
+import { ArrowDropDown } from "@mui/icons-material";
 const steps = [
-  "Ерөнхий мэдээлэл",
+  "Аялалын мэдээлэл",
   "Хэрэглэчийн мэдээлэл",
   "Дансны мэдээлэл",
   "Баталгаажуулалт",
 ];
-
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
@@ -33,11 +32,9 @@ export default function HorizontalLinearStepper() {
       newSkipped = new Set(newSkipped.values());
       newSkipped.delete(activeStep);
     }
-
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
     setSkipped(newSkipped);
   };
-
   const handleBack = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
@@ -84,17 +81,37 @@ export default function HorizontalLinearStepper() {
             );
           })}
         </Stepper>
-
-        {activeStep === 4 ? (
-          <React.Fragment>
-            <Typography sx={{ mt: 2, mb: 1 }}>Захиалга амжилттай</Typography>
-            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
-              <Box sx={{ flex: "1 1 auto" }} />
-              <Button onClick={handleReset}>Цэвэрлэх</Button>
-            </Box>
-          </React.Fragment>
+        {activeStep === 0 ? (
+          <Grid>
+            <Grid>
+              <Box
+                sx={{
+                  position: "relative",
+                  borderRadius: "20px",
+                }}
+              >
+                <img src="pic/12.png" alt="" width={420} height={310} />
+                <Box
+                  sx={{
+                    color: "dark",
+                    position: "absolute",
+                    top: "75%",
+                    left: "10%",
+                    color: "white",
+                    fontSize: "28px",
+                  }}
+                >
+                  name
+                </Box>
+              </Box>
+            </Grid>{" "}
+          </Grid>
         ) : (
-          <React.Fragment>
+          <div></div>
+        )}
+        {activeStep === 1 ? (
+          <Grid>
+            {" "}
             <Box>
               <TextField
                 margin="normal"
@@ -137,6 +154,49 @@ export default function HorizontalLinearStepper() {
                 autoFocus
               />
             </Box>
+          </Grid>
+        ) : (
+          <div></div>
+        )}
+        {activeStep === 2 ? (
+          <Grid>
+            <ArrowDropDown></ArrowDropDown>
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id=""
+              label="Дансны нэр"
+              name="test"
+              autoComplete="test"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              id=""
+              label="Дансны дугаар"
+              name="test"
+              autoComplete="test"
+              autoFocus
+            />
+          </Grid>
+        ) : (
+          <div></div>
+        )}
+        {activeStep === 3 ? <Grid>d</Grid> : <div></div>}
+
+        {activeStep === 4 ? (
+          <React.Fragment>
+            <Typography sx={{ mt: 2, mb: 1 }}>Захиалга амжилттай</Typography>
+            <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
+              <Box sx={{ flex: "1 1 auto" }} />
+              <Button onClick={handleReset}>Цэвэрлэх</Button>
+            </Box>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
             <Box sx={{ display: "flex", flexDirection: "row", pt: 2 }}>
               <Button
                 color="inherit"
