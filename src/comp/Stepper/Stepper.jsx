@@ -7,7 +7,14 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { TextField, Grid } from "@mui/material";
 import { Container } from "@mui/system";
-import { ArrowDropDown } from "@mui/icons-material";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import InputAdornment from "@mui/material/InputAdornment";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import IconButton from "@mui/material/IconButton";
+import Autocomplete from "@mui/material/Autocomplete";
 const steps = [
   "Аялалын мэдээлэл",
   "Хэрэглэчийн мэдээлэл",
@@ -17,7 +24,18 @@ const steps = [
 export default function HorizontalLinearStepper() {
   const [activeStep, setActiveStep] = React.useState(0);
   const [skipped, setSkipped] = React.useState(new Set());
-
+  const [showPassword, setShowPassword] = React.useState(false);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+  const chooseBank = [
+    { label: "Хаан" },
+    { label: "Голомт" },
+    { label: "Хас банк" },
+    { label: "Төрийн банк" },
+    { label: "Мбанк" },
+  ];
   const isStepOptional = (step) => {
     return step === 1;
   };
@@ -58,10 +76,13 @@ export default function HorizontalLinearStepper() {
 
   return (
     <Container>
+      <Typography></Typography>;
       <Box
         sx={{
           width: "100%",
-          marginTop: "10%",
+          height: "39vh",
+          marginTop: "4%",
+          marginBottom: "4%",
         }}
       >
         <Stepper activeStep={activeStep}>
@@ -81,37 +102,9 @@ export default function HorizontalLinearStepper() {
             );
           })}
         </Stepper>
-        {activeStep === 0 ? (
-          <Grid>
-            <Grid>
-              <Box
-                sx={{
-                  position: "relative",
-                  borderRadius: "20px",
-                }}
-              >
-                <img src="pic/12.png" alt="" width={420} height={310} />
-                <Box
-                  sx={{
-                    color: "dark",
-                    position: "absolute",
-                    top: "75%",
-                    left: "10%",
-                    color: "white",
-                    fontSize: "28px",
-                  }}
-                >
-                  name
-                </Box>
-              </Box>
-            </Grid>{" "}
-          </Grid>
-        ) : (
-          <div></div>
-        )}
+        {activeStep === 0 ? <Grid></Grid> : <div></div>}
         {activeStep === 1 ? (
           <Grid>
-            {" "}
             <Box>
               <TextField
                 margin="normal"
@@ -160,7 +153,6 @@ export default function HorizontalLinearStepper() {
         )}
         {activeStep === 2 ? (
           <Grid>
-            <ArrowDropDown></ArrowDropDown>
             <TextField
               margin="normal"
               required
@@ -181,12 +173,38 @@ export default function HorizontalLinearStepper() {
               autoComplete="test"
               autoFocus
             />
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={chooseBank}
+              sx={{ width: "100% " }}
+              renderInput={(params) => <TextField {...params} label="Банк" />}
+            />
+            <FormControl sx={{ width: "100%" }} variant="outlined">
+              <InputLabel htmlFor="outlined-adornment-cvv">CVV code</InputLabel>
+              <OutlinedInput
+                id="outlined-adornment-password"
+                type={showPassword ? "text" : "password"}
+                endAdornment={
+                  <InputAdornment position="end">
+                    <IconButton
+                      aria-label="toggle password visibility"
+                      onClick={handleClickShowPassword}
+                      onMouseDown={handleMouseDownPassword}
+                      edge="end"
+                    >
+                      {showPassword ? <VisibilityOff /> : <Visibility />}
+                    </IconButton>
+                  </InputAdornment>
+                }
+                label="CVV code"
+              />
+            </FormControl>
           </Grid>
         ) : (
           <div></div>
         )}
         {activeStep === 3 ? <Grid>d</Grid> : <div></div>}
-
         {activeStep === 4 ? (
           <React.Fragment>
             <Typography sx={{ mt: 2, mb: 1 }}>Захиалга амжилттай</Typography>

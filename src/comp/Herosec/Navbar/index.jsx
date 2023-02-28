@@ -74,8 +74,9 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
         sx={{
           background: "transparent",
           boxShadow: "none",
-          position: "absolute",
+          position: "static",
           display: "flex",
+          backgroundColor: "#212121",
         }}
       >
         <Toolbar>

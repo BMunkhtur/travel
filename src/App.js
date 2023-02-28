@@ -11,7 +11,8 @@ import Anothermain from "./comp/Mainsec/MainsecCard/Anothermain";
 import Beach from "./comp/test/Categories";
 import Footer from "./comp/Footer/Footer";
 import Navbar from "./comp/Herosec/Navbar/index";
-import Stepper from "./comp/Stepper/Stepper.jsx";
+import Stepper from "./comp/Stepper/Stepper";
+
 function App() {
   const [user, setUser] = useState(localStorage.getItem("user"));
   const [open, setOpen] = React.useState(false);
