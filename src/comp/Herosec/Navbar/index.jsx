@@ -25,7 +25,6 @@ const settings = ["Profile", "Account", "Dashboard", "Log out"];
 function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
@@ -44,7 +43,6 @@ function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
