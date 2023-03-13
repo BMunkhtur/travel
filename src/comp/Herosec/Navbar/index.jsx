@@ -19,11 +19,9 @@ import Menu from "@mui/material/Menu";
 import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-
 const drawerWidth = 240;
 const navItems = ["Home", "Stays", "Flight", "Packages"];
 const settings = ["Profile", "Account", "Dashboard", "Log out"];
-
 function Navbar({ login, logout, user, open, handleClose, handleOpen }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
